@@ -24,8 +24,8 @@ module.exports = function (config) {
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
-    autoWatch: true,
-    browsers: ['Chrome'],
+    autoWatch: true, // habilita/desabilita a procura de arquivos de testes.
+    browsers: ['Chrome'], // navegador que irá abrir ao executar o teste
     singleRun: false,
     restartOnFileChange: true
   });
