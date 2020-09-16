@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TitleCasePipe } from './infraestrutura/pipes/title-case.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,
