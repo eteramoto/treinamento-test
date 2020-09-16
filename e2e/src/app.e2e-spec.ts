@@ -17,6 +17,28 @@ describe('workspace-project App', () => {
     expect(page.getTitleText()).toEqual('Hello Test');
   });
 
+
+  it('deve clicar no link do admin', () => {
+    browser.waitForAngularEnabled(true);
+    let linkAdmin = page.getMenuElements().menuAdmin;
+    linkAdmin.click();
+    let loginClomponent = page.getLoginElements();
+    loginClomponent.campoUsuario.sendKeys('preenchido pelo teste');
+    page.pegarEvidencia('botao-login-inativo_1');
+
+    loginClomponent.campoSenha.sendKeys('12345');
+    page.pegarEvidencia('botao-login-ativo_1');
+    // browser.sleep(10000);
+    loginClomponent.botaoLogin.click();
+    browser.waitForAngular();
+
+    let componenteLogado = page.getAdminDashboardElements().paragrafo;
+    expect(componenteLogado.getText()).toBe('dashboard works!');
+    page.pegarEvidencia('texto do componente dashboard');
+    browser.sleep(10000);
+
+  });
+
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
     const logs = await browser.manage().logs().get(logging.Type.BROWSER);
