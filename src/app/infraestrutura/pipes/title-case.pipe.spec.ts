@@ -18,4 +18,8 @@ describe('TitleCasePipe', () => {
     expect(pipe.transform('hello world')).toBe('Hello World');
   });
 
+  it('Deve retornar vazio caso envie a string ""', () => {
+    expect(pipe.transform('')).toBe('');
+  });
+
 });
