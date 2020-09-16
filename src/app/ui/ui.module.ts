@@ -12,9 +12,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MenuPageLayoutComponent } from './menu-page-layout/menu-page-layout.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [MenuPageLayoutComponent],
   imports: [
     CommonModule,
     LayoutModule,

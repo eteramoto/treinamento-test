@@ -30,11 +30,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('treinamento-test');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    // a partir do elemento html do componente, podemos procurar os elementos html e obter suas propriedades.
-    expect(compiled.querySelector('.content span').textContent).toContain('treinamento-test app is running!');
-  });
 });
