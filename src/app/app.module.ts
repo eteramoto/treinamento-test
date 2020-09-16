@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TitleCasePipe } from './infraestrutura/pipes/title-case.pipe';
+import { LoginService } from './services/login.service';
+import { UiModule } from './ui/ui.module';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,10 @@ import { TitleCasePipe } from './infraestrutura/pipes/title-case.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    UiModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

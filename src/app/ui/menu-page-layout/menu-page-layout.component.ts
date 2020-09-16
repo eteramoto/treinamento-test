@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { map } from "rxjs/operators";
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-menu-page-layout',
@@ -18,6 +19,11 @@ export class MenuPageLayoutComponent {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
+    private loginService: LoginService
   ) { }
+
+  sair() {
+    this.loginService.sair();
+  }
 
 }

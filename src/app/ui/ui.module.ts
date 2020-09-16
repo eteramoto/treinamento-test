@@ -18,6 +18,7 @@ import { MenuPageLayoutComponent } from './menu-page-layout/menu-page-layout.com
   declarations: [MenuPageLayoutComponent],
   imports: [
     CommonModule,
+    RouterModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -31,6 +32,7 @@ import { MenuPageLayoutComponent } from './menu-page-layout/menu-page-layout.com
     MatProgressSpinnerModule
   ],
   exports: [
+    RouterModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
