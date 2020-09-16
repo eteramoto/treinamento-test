@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TitleCasePipe } from './infraestrutura/pipes/title-case.pipe';
 import { LoginService } from './services/login.service';
 import { UiModule } from './ui/ui.module';
+import { AuthGuard } from './infraestrutura/guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { UiModule } from './ui/ui.module';
     BrowserAnimationsModule,
     UiModule
   ],
-  providers: [LoginService],
+  providers: [LoginService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
