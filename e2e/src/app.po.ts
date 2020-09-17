@@ -19,4 +19,25 @@ export class AppPage {
     });
   }
 
+  getMenuElements() {
+    return {
+      menuAdmin: element(by.linkText('Dashboard')),
+      menuSair: element(by.linkText('Sair'))
+    }
+  }
+
+  getLoginElements() {
+    return {
+      campoUsuario: element(by.css('input[name=usuario]')),
+      campoSenha: element(by.css('input[name=senha]')),
+      botaoLogin: element(by.buttonText('login'))
+    }
+  }
+
+  getAdminDashboardElements() {
+    return {
+      paragrafo: element(by.css('p'))
+    }
+  }
+
 }
