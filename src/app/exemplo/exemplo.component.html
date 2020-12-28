@@ -1,0 +1,4 @@
+<input matInput placeholder="campo1" [(ngModel)]="campo1" name="campo1">
+<input matInput placeholder="campo2" [(ngModel)]="campo2" name="campo2">
+<button type="button" (click)="somarCampos()" color="primary">somar</button>
+<label [ngClass]="(resultadoSoma)?'positivo':'negativo'" >{{resultado}}</label>

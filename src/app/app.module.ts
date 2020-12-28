@@ -8,11 +8,13 @@ import { TitleCasePipe } from './infraestrutura/pipes/title-case.pipe';
 import { LoginService } from './services/login.service';
 import { UiModule } from './ui/ui.module';
 import { AuthGuard } from './infraestrutura/guards/auth.guard';
+import { ExemploComponent } from './exemplo/exemplo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TitleCasePipe
+    TitleCasePipe,
+    ExemploComponent
   ],
   imports: [
     BrowserModule,
